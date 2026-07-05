@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class JawabanSiswa extends Model
 {
-    protected $table = 'JawabanSiswa';
+    protected $table = 'jawabansiswa';
 
     protected $fillable = [
         'user_id',
