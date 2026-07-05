@@ -107,7 +107,14 @@
                             <h3 class="text-xl font-semibold mb-2">Analisis Performa</h3>
                             <p>Dapatkan analisis mendalam tentang performa belajar Anda dan rekomendasi untuk perbaikan.</p>
                             <div class="mt-auto flex justify-end">
-                                <a href="" class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
+                                <a 
+                                @guest
+                                    onclick="smoothScroll('Login'); Login()"
+                                @endguest
+                                @auth
+                                href=""
+                                @endauth
+                                class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
                                     Pelajari
                                 </a>
                             </div>
@@ -116,7 +123,14 @@
                             <h3 class="text-xl font-semibold mb-2">Komunitas Belajar</h3>
                             <p>Bergabung dengan komunitas pembelajar lainnya untuk berbagi pengalaman dan tips belajar.</p>
                             <div class="mt-auto flex justify-end">
-                                <a href="" class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
+                                <a 
+                                @guest
+                                    onclick="smoothScroll('Login'); Login()"
+                                @endguest
+                                @auth
+                                href=""
+                                @endauth
+                                class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
                                     Pelajari
                                 </a>
                             </div>
@@ -125,7 +139,14 @@
                             <h3 class="text-xl font-semibold mb-2">Komunitas Belajar</h3>
                             <p>Bergabung dengan komunitas pembelajar lainnya untuk berbagi pengalaman dan tips belajar.</p>
                             <div class="mt-auto flex justify-end">
-                                <a href="" class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
+                                <a 
+                                @guest
+                                    onclick="smoothScroll('Login'); Login()"
+                                @endguest
+                                @auth
+                                href=""
+                                @endauth
+                                class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
                                     Pelajari
                                 </a>
                             </div>
