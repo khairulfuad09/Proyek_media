@@ -48,7 +48,7 @@ class AdminController extends Controller
         $guruCount = User::where('role', 'guru')->count();
         $unknownCount = User::where('role', 'unknown')->count();
         $progressSiswa = progresssiswa::with(['Materi', 'tahapan', 'User', 'Jawabansiswa', 'FeedbackGuru'])
-            ->whereHas('user', function ($q) {
+            ->whereHas('users', function ($q) {
                 $q->where('role', 'siswa');
             })
             ->get()
