@@ -72,7 +72,14 @@
                     <img class="md:h-150" src="/img/hero-img.svg" alt="">
                     <div class="flex flex-col justify-center">
                         <p class="mb-6 text-2xl ">Platform pembelajaran untuk meningkatkan kemampuan kognitif Anda.</p>
-                        <button class="mb-10 rounded bg-purple-950 text-white p-2 hover:bg-purple-400 text-xl font-bold" onclick="window.location.href='{{ route('progress.siswa') }}'">
+                        <button class="mb-10 rounded bg-purple-950 text-white p-2 hover:bg-purple-400 text-xl font-bold"
+                        @guest
+                            onclick="smoothScroll('Login'); Login()"
+                        @endguest
+                        @auth
+                        onclick="window.location.href='{{ route('progress.siswa') }}'"
+                        @endauth
+                        >
                             Mulai Belajar!
                         </button>
                     </div>
@@ -83,7 +90,15 @@
                             <p>Akses berbagai modul pembelajaran yang dirancang khusus untuk meningkatkan kemampuan kognitif Anda.</p>
                             {{-- <button class="mb-10 rounded bg-blue-600 text-white p-2 hover:bg-blue-900 font-bold ">Pelajari</button> --}}
                             <div class="mt-auto flex justify-end">
-                                <a href="/Discovery-Learning/sistem-koordinasi-manusia/stimulasi" class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
+                                <a
+                                @guest
+                                    onclick="smoothScroll('Login'); Login()"
+                                @endguest
+                                @auth
+                                    
+                                href="/Discovery-Learning/sistem-koordinasi-manusia/stimulasi"
+                                @endauth
+                                class="rounded bg-blue-600 text-white px-4 py-2 font-bold hover:bg-blue-900 transition mt-20">
                                     Pelajari
                                 </a>
                             </div>
@@ -116,6 +131,7 @@
                             </div>
                         </div>
                     </div>
+                    @guest
                     <div id="registrasi" class="grid place-content-center scroll-mt-16 ">
                         <div  class="bg-purple-800 rounded-lg mt-5 w-100 justify-center shadow-lg">
                             <p class="text-center py-5 text-3xl font-bold">Daftar</p>
@@ -147,6 +163,7 @@
                             </form>
                         </div>
                     </div>
+                    @endguest
             </div>
         <section id="tentang-pembuat" class=" min-h-screen bg-purple-50 flex items-center justify-center px-6">
             <div class="max-w-5xl w-full bg-white rounded-2xl shadow-lg p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10">
