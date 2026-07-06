@@ -10,7 +10,12 @@
     <div class="mb-6">
 
         <h1 class="text-3xl font-bold text-white">
-            Dashboard Guru
+            @can('admin')
+                Dashboard Admin
+            @endcan
+            @can('guru')
+                Dashboard Guru
+            @endcan
         </h1>
 
         <p class="text-purple-200">
